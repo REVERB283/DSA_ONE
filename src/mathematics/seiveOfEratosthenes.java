@@ -11,7 +11,7 @@ public class seiveOfEratosthenes {
         isPrime[0] = false;
         isPrime[1] = false;
 
-        for (int i = 2; i * i < n; i++) {
+        for (int i = 2; i * i <= n; i++) {
             for (int j = i * 2; j <= n; j += i) {
                 isPrime[j] = false;
             }
@@ -21,6 +21,6 @@ public class seiveOfEratosthenes {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(findPrime(27)));
+        System.out.println(Arrays.toString(findPrime(4)));
     }
 }
