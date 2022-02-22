@@ -3,13 +3,13 @@ package mathematics;
 public class StepByStep {
 
     public static int solve(int A) {
-        int i = 0, x = 0;
+        int i = 0, sum = 0;
         int B = Math.abs(A);
 
-        while (x < B || (x - B) % 2 != 0) {
+        while (sum < B || ((sum - B) & 1) != 0) {
             i++;
-            System.out.println(x);
-            x += i;
+            System.out.println(sum);
+            sum += i;
         }
         return i;
     }
