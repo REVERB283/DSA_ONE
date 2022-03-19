@@ -2,14 +2,14 @@ package mathematics;
 
 public class fastPower {
 
-    public static long findFastPower(long a, long b, int n) {
+    public static long findFastPower(long a, long b, int M) {
         long result = 1;
 
         while (b != 0) {
             if ((b & 1) != 0)
-                result = (result * (a % n)) % n;
+                result = (result * (a % M)) % M;
 
-            a = ((a % n) * (a % n)) % n;
+            a = ((a % M) * (a % M)) % M;
             b >>= 1;
         }
 
