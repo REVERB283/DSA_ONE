@@ -71,7 +71,7 @@ public class basics {
         return prev;
     }
 
-    public static Node closeWithRandom(Node head) {
+    public static Node cloneWithRandom(Node head) {
         Node cur = head;
 
         //  inserting new nodes as clone
@@ -133,7 +133,7 @@ public class basics {
         n2.random = n1;
         n3.random = n2;
         n4.random = n4;
-        head = closeWithRandom(head);
+        head = cloneWithRandom(head);
         display(head);
 
         Node cur = head;
