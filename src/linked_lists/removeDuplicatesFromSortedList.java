@@ -20,11 +20,11 @@ public class removeDuplicatesFromSortedList {
         ListNode prev = newList;
 
         while (cur != null) {
-            while (cur.next != null && cur.val == cur.next.val)
-                cur = cur.next;
+            while (cur.next != null && cur.val == cur.next.val) cur = cur.next;
 
             if (prev.next == cur) prev = prev.next;
             else prev.next = cur.next;
+
             cur = cur.next;
         }
 
